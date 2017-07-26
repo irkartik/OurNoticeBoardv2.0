@@ -1,0 +1,59 @@
+{% extends 'notes/base.html' %}
+
+{% block title %}
+  {{ note.note_title }}
+{% endblock %}
+
+{% block body %}
+	<!-- Wide card with share menu button -->
+<style>
+@media screen and (max-width: 400px) {
+    .demo-card-wide.mdl-card {
+        width: 90%;
+      }
+}
+.demo-card-wide.mdl-card.mdl-shadow--2dp {
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.demo-card-wide.mdl-card {
+  width: 80%;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url('{{note.note_logo.url}}') center / cover;
+
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+.author{
+  font-size: 19px;
+  color: #eee;
+}
+</style>
+
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+  <span class="title">
+    <h2 class="mdl-card__title-text">{{note.note_title}}, </h2>
+    <h5 class="mdl-card__title-text"><span class="author">&nbsp;-by {{note.created_by}}</span></h5>  
+  </span>
+  </div>
+  <div class="mdl-card__supporting-text">
+    {{ note.body }}
+  </div>
+  <div class="mdl-card__menu">
+  {% if note.created_by == request.user %}
+     <form action="{% url 'notes:note-update' note.pk%}" method="get">
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+          <i class="material-icons">edit</i>
+        </button>
+      </form>
+  {% endif %}
+  </div>
+</div>
+{% endblock %}

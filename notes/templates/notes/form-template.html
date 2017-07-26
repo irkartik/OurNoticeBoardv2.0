@@ -1,0 +1,14 @@
+	<div>
+	    <span class="text-danger small">{{ field.errors }}</span>
+	</div>
+{% for field in form %}
+  	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+	{{field.label_tag}}
+	{{field}} 
+  	</div> <br>
+{% endfor %}
+
+
+
+
+

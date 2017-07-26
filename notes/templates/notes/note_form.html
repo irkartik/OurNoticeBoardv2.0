@@ -1,0 +1,36 @@
+{% extends 'notes/base.html' %}
+
+{% block script %}
+<script>
+    $( document ).ready(function() {
+    $("input").addClass("mdl-textfield__input");
+    $("label").addClass('mdl-textfield__label');
+    });
+</script>
+{% endblock %}
+
+
+{% block body %}
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-12 col-md-7">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'notes/form-template.html' %}
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                  Submit
+                                </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

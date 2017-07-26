@@ -1,0 +1,59 @@
+{% extends 'notes/base.html' %}
+
+{% block title %}Log In{% endblock %}
+{% block body %}
+
+<style>
+    .container-fluid{
+        text-align: center;
+        align-items: center;
+        position: relative;
+    }
+    .heading{
+        border-top: 2px solid #080808;
+        border-bottom: 2px solid #080808;
+    }
+    .panel{
+        position: relative;
+    }
+</style>
+<div class="container-fluid">
+    {% if not user.is_authenticated %}
+        <h3 class="heading">Welcome to Our Notice Board</h3>
+        <h5>A virtual noticeboard for all your notices</h5>
+    {% endif %}
+    <div class="row">
+        <div class="col-sm-12 col-md-offset-3 col-md-6 col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Log In</h3>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form action="{% url 'notes:login_user'%}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input id="id_username" class="mdl-textfield__input" type="text" maxlength="30" name="username">
+                            <label for = "id_username" class="mdl-textfield__label">Username</label>
+                          </div>
+                          <br>
+                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input id="id_password" class="mdl-textfield__input" type="password" name="password" maxlength="30">
+                            <label for = "id_password" class="mdl-textfield__label">Password</label>
+                          </div>
+                          <br>
+                            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised">
+                              Submit
+                            </button>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    Don't have an account? <a href="{% url 'notes:register' %}">Click here</a> to register.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

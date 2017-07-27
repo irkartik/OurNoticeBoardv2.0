@@ -1,4 +1,4 @@
-# OurNoticeBoardv2.0 (<a href="demo-ournoticeboard.herokuapp.com">Demo</a>)
+# OurNoticeBoardv2.0 (<a href="https://demo-ournoticeboard.herokuapp.com">Demo</a>)
 
 An Upgraded version of OurNoticeBoard app (github.com/rajujha373/OutNoticeBoard) which can be used as a virtual notice board for you and your colleagues.
 Now you can decide which note shall be visible to others and which shall be just for you.

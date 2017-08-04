@@ -27,6 +27,13 @@ Now you can decide which note shall be visible to others and which shall be just
 2. Ready for deployment
 3. If you again want to use the app in your local machine, then just replace the same files by the files in /localhost_settings/.
 
+# Using Social Logins
+
+In order to use the social login buttons on your localhost, do the following:
+1. Generate client ID and client secret from the respective social login platform via your developer account.
+2. Put the data into /notepad/settings/
+3. Remember to add your domain name to the respective social login platform's application
+
 # Screenshots
 
 <img src="/screenshots/login.png">

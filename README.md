@@ -3,6 +3,8 @@
 An Upgraded version of OurNoticeBoard app (github.com/rajujha373/OutNoticeBoard) which can be used as a virtual notice board for you and your colleagues.
 Now you can decide which note shall be visible to others and which shall be just for you.
 
+<i>Any contributions from you guys are welcome. Just fork this repository, make changes in the code and create a pull request, I will merge the changes if it seems interesting. :)</i>
+
 # Requirements (that shall be installed in your system)
 1. Git 
 2. virtualenv

@@ -5,6 +5,8 @@ Now you can decide which note shall be visible to others and which shall be just
 
 <i>Any contributions from you guys are welcome. Just fork this repository, make changes in the code and create a pull request, I will merge the changes if it seems interesting. :)</i>
 
+Do star the repo if you think it worth it. 
+
 # Requirements (that shall be installed in your system)
 1. Git 
 2. virtualenv
@@ -19,7 +21,7 @@ Now you can decide which note shall be visible to others and which shall be just
 <code>$ virtualenv notesenv</code> <br>
 <code>$ notesenv\Scripts\activate</code> <br>
 4. Install the requirements for the project <br>
-<code>$ pip install requirements.txt</code>  <br>
+<code>$ pip install -r requirements.txt</code>  <br>
 5. Now start the localhost server<br>
 <code>$ python manage.py runserver</code> <br>
 
